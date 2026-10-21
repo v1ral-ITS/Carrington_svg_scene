@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ImPerial TeK. | Night Operations SVG Scene</title>
+
+  <style>
+    /* WHAT: Page colors and typography.
+       HOW: A dark background frames the SVG illustration.
+       WHY: The contrast keeps the scene and written content readable. */
+    :root {
+      color-scheme: dark;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 36px 20px;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #c0cddd;
+      margin-bottom: 28px;
+    }
+
+    /* WHAT: Responsive SVG display.
+       HOW: The width follows its container while viewBox
+       preserves the illustration's coordinate system.
+       WHY: The artwork stays proportional on smaller screens. */
+    .scene {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #354762;
+      border-radius: 14px;
+      background: #0b1120;
+    }
+
+    .content {
+      margin-top: 24px;
+      padding: 20px 24px;
+      background: #172338;
+      border: 1px solid #354762;
+      border-radius: 12px;
+      line-height: 1.7;
+    }
+
+    h2 {
+      color: #93c5fd;
+      margin-top: 0;
+    }
+
+    p {
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>ImPerial TeK. | Night Operations</h1>
+      <p class="subtitle">
+        An original technology-themed scene built with inline SVG.
+      </p>
+    </header>
+
+    <!-- WHAT: The complete SVG illustration.
+         HOW: A 600 by 350 viewBox provides coordinates for every shape.
+         WHY: Inline SVG lets the browser draw scalable vector artwork
+         directly from HTML without an external image file. -->
+    <svg class="scene"
+         viewBox="0 0 600 350"
+         role="img"
+         aria-labelledby="scene-title"
+         xmlns="http://www.w3.org/2000/svg">
+
+      <!-- The title is the SVG's first child.
+           aria-labelledby connects this text to the image for accessibility. -->
+      <title id="scene-title">
+        Nighttime city skyline with a glowing computer monitor,
+        circuit-style graph, stars, and a golden moon
+      </title>
+
+      <!-- Background rectangle creates the night sky. -->
+      <rect x="0" y="0" width="600" height="350"
+            rx="12" fill="#0b1120"/>
+
+      <!-- A circle represents the moon.
+           The darker overlapping circle creates a crescent effect. -->
+      <circle cx="490" cy="64" r="30" fill="#fbbf24"/>
+      <circle cx="503" cy="54" r="26" fill="#0b1120"/>
+
+      <!-- Grouped stars share their golden fill color.
+           Each star uses a small circle. -->
+      <g fill="#fbbf24">
+        <circle cx="65" cy="49" r="2.5"/>
+        <circle cx="126" cy="78" r="2"/>
+        <circle cx="217" cy="41" r="2.5"/>
+        <circle cx="388" cy="67" r="2"/>
+        <circle cx="550" cy="111" r="2.5"/>
+      </g>
+
+      <!-- WHAT: Grouped city buildings.
+           HOW: Six rectangles share stroke and stroke-width from <g>.
+           WHY: Grouping avoids repeating common attributes and
+           visually connects the buildings into one skyline. -->
+      <g fill="#263f63" stroke="#4d719b" stroke-width="2">
+        <rect x="0" y="137" width="80" height="143"/>
+        <rect x="83" y="107" width="88" height="173"/>
+        <rect x="175" y="151" width="70" height="129"/>
+        <rect x="250" y="119" width="100" height="161"/>
+        <rect x="355" y="157" width="90" height="123"/>
+        <rect x="450" y="128" width="150" height="152"/>
+      </g>
+
+      <!-- Window rectangles use one repeated accent color. -->
+      <g fill="#60a5fa">
+        <rect x="100" y="125" width="10" height="13"/>
+        <rect x="123" y="125" width="10" height="13"/>
+        <rect x="146" y="125" width="10" height="13"/>
+        <rect x="100" y="155" width="10" height="13"/>
+        <rect x="146" y="155" width="10" height="13"/>
+        <rect x="270" y="138" width="10" height="13"/>
+        <rect x="298" y="138" width="10" height="13"/>
+        <rect x="326" y="138" width="10" height="13"/>
+        <rect x="473" y="149" width="10" height="13"/>
+        <rect x="502" y="149" width="10" height="13"/>
+      </g>
+
+      <!-- Foreground rectangle creates the workstation surface. -->
+      <rect x="0" y="272" width="600" height="78"
+            fill="#101b2c"/>
+
+      <!-- An ellipse creates a soft reflection under the monitor. -->
+      <ellipse cx="300" cy="320" rx="190" ry="18"
+               fill="#25486c"/>
+
+      <!-- The monitor uses outlined rectangles to distinguish
+           its frame from the screen. -->
+      <rect x="160" y="163" width="280" height="138"
+            rx="12" fill="#0b1120"
+            stroke="#60a5fa" stroke-width="5"/>
+
+      <rect x="172" y="175" width="256" height="113"
+            rx="5" fill="#132b45"/>
+
+      <!-- A polyline draws the connected data signal.
+           fill="none" prevents an unwanted filled polygon.
+           stroke-linejoin smooths the corners. -->
+      <polyline
+        points="192,253 219,229 241,243 272,201
+                305,220 336,190 369,220 406,198"
+        fill="none"
+        stroke="#5eead4"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+      <!-- Signal nodes are grouped circles with a shared fill. -->
+      <g fill="#fbbf24" stroke="#0b1120" stroke-width="2">
+        <circle cx="272" cy="201" r="6"/>
+        <circle cx="336" cy="190" r="6"/>
+        <circle cx="406" cy="198" r="6"/>
+      </g>
+
+      <!-- A line forms the monitor stand.
+           Lines require a stroke because they have no filled area. -->
+      <line x1="300" y1="301" x2="300" y2="321"
+            stroke="#8ba6c8" stroke-width="9"/>
+
+      <!-- A polygon forms the trapezoid-shaped monitor base. -->
+      <polygon points="250,322 350,322 369,337 231,337"
+               fill="#607eaa"
+               stroke="#a7bdd8"
+               stroke-width="2"/>
+
+      <!-- Text inside SVG is positioned using x and y.
+           text-anchor="middle" centers each label. -->
+      <text x="300" y="50"
+            text-anchor="middle"
+            font-family="Arial, sans-serif"
+            font-size="21"
+            font-weight="700"
+            letter-spacing="3"
+            fill="#f1f5f9">
+        IMPERIAL TEK.
+      </text>
+
+      <text x="300" y="74"
+            text-anchor="middle"
+            font-family="Arial, sans-serif"
+            font-size="12"
+            letter-spacing="4"
+            fill="#5eead4">
+        NIGHT OPERATIONS
+      </text>
+    </svg>
+
+    <section class="content">
+      <h2>Scene Description</h2>
+      <p>
+        Night Operations depicts a technology workstation overlooking
+        a city after dark. Rectangles construct the skyline, building
+        windows, desk, and computer monitor. Circles create the moon,
+        stars, and signal markers, while an ellipse suggests reflected
+        light beneath the workstation. A polyline forms the connected
+        data signal on the monitor, a line supports the display, and
+        a polygon forms its base. Grouped elements share colors and
+        outlines to maintain consistency throughout the scene.
+      </p>
+    </section>
+
+    <section class="content">
+      <h2>Reflection</h2>
+      <p>
+        The most challenging shape to position was the polyline inside
+        the computer monitor. Unlike a rectangle or circle, a polyline
+        requires several coordinate pairs, and every point affects the
+        appearance of the overall design. I needed to consider the
+        monitor's boundaries while arranging the points into a
+        recognizable data signal. Working with the SVG viewBox helped
+        me understand how the individual coordinates relate to the
+        full illustration.
+      </p>
+      <p>
+        <!-- PERSONALIZE: Replace this paragraph with the color
+             combination you actually tried and rejected. -->
+        My initial color experiment used brighter background colors,
+        but the resulting contrast made the foreground elements less
+        distinctive. I preferred a darker navy background with blue,
+        teal, and gold accents because those colors separate the
+        skyline, monitor, and data signal more clearly.
+      </p>
+      <p>
+        Similar vector illustrations appear in software dashboards,
+        technology landing pages, and application onboarding screens.
+        This project showed me how simple SVG elements can be combined
+        into a complete illustration without relying on a bitmap image.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
